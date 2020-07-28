@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Movie Recommender System</title>
+  </head>
+  <body>
+    <form class="form" action="http://127.0.0.1:8000">
+    <div class="container center-divison text-center mb-3">
+      <button style="margin:15px;padding:15" type="submit" class="btn btn-primary">Home</button>
+    </div>
+  </form>
+  <div class="card mb-5 mx-auto mt-3 ml-3 mr-3" style="width: 17rem ;max-height: 30rem;">
+    {% load static %}
+    <img src={{query_movie_poster_link}} class="card-img-top" alt="Movie Poster" class="card-img-top" onerror="this.src ='{% static 'notfoundimage.png' %}';" style="max-height: 20rem">
+    <div class="card-body">
+      <h4 class="card-title text-center"><a href={{query_movie_link}}><b>{{query_movie_name}}</b></a></h4>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <p><h2 class="text-center text-dark bg-light p-3">Here are some Movie Recommendations for You !</h2></p>
+    <br/>
+  <!-- First Card Deck-->
+    <div class="card-deck mx-auto text-center ml-3 mr-3" style="width: 75rem;">
+    {%for movie in movie_list1%}
+    <div class="card ml-3 mb-3 mr-3" style="width: 15rem; max-height: 30rem; margin-right:30px;">
+      {% load static %}
+      <img src={{movie.movie_poster_link}} class="card-img-top" onerror="this.src ='{% static 'notfoundimage.png' %}';" alt="Movie Poster" style="height: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title"><a href={{movie.movie_link}}><b>{{movie.movie_name}}</b></a></h5>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+<br/> 
+<br/>
+<!-- Second Card Deck-->
+  <div class="card-deck mx-auto text-center ml-3 mr-3" style="width: 75rem;">
+    {%for movie in movie_list2%}
+    <div class="card ml-3 mb-3 mr-3" style="width: 15rem; max-height: 30rem; margin-right:30px;">
+      {% load static %}
+      <img src={{movie.movie_poster_link}} class="card-img-top" onerror="this.src ='{% static 'notfoundimage.png' %}';" alt="Movie Poster" style="height: 20rem;">
+      <div class="card-body">
+        <h5 class="card-title"><a href={{movie.movie_link}} target="_blank"><b>{{movie.movie_name}}</b></a></h5>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+<br/>
+<br/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

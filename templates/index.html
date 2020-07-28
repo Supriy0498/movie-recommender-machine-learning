@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Movie Recommender System</title>
+  </head>
+  <body>
+	<form class="form" action="recommendmovie/" method="GET" >
+	  <div class="container center-divison text-center">
+	    <label class="container mx-auto mt-3 " for="movie_name"><h2>Movie Recommender</h2></label>
+	    <input type="text" class="form-control" id="movie_name" placeholder="Enter hollywood movie name" name = "movie" required="">
+	    <button style="margin:15px;padding:15" type="submit" class="btn btn-primary">Get Recommendations</button>
+	    <br/>
+	  </div>
+	<div class="container mt-5">
+	    <p><b>About:</b></p>
+	    <p class="text-dark bg-light p-3">This is Django based Movie Recommender Web Application which uses Machine Learning K-Nearest Neighbor method for recommending movie.</p>
+	    <br/>
+	</div>
+	</form>
+  </body>
+</html>

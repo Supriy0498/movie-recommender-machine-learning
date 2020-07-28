@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Movie Recommender System</title>
+  </head>
+  <body>
+	<form class="form" action="http://127.0.0.1:8000">
+	  <div class="container center-divison text-center">
+	    <button style="margin:15px;padding:15" type="submit" class="btn btn-primary">Home</button>
+	    <br/>
+	    <label class="container mx-auto mt-3 " for="movie_name"><h2>Oops :(</h2></label>
+	  </div>
+	<div class="container mt-3">
+	    <p class="text-dark bg-light p-3">Seems like your searched Movie ' <b>{{movie}}</b> ' is not in our DataBase. Please try some other movies</p>
+	    <br/>
+	</div>
+	</form>
+  </body>
+</html>
