@@ -1,6 +1,4 @@
 # movie-recommender-machine-learning
-Movie Recommender Django web application 
-
 Movie Recommender Django web application using Machine Learning K-Nearest Neighbor method.
 
 This app uses python Django framework for website application.
