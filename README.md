@@ -3,5 +3,5 @@ Movie Recommender Django web application using Machine Learning K-Nearest Neighb
 
 This app uses python Django framework for website application.
 For recommending movies I have used K-Nearest Neighbor method machine learning algorithm.
-\n
+
 Dataset used : https://www.kaggle.com/rounakbanik/the-movies-dataset
